@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="title-page">Conversor de moedas</h1>
+    </header>
+    <section class="container-page">
+        <div class="title-container">
+            <h2>Converta as principais moedas de maneira fácil e prática.</h2>
+        </div>
+        <div class="main-container">
+            <div class="container-options-conversion">
+                <label>
+                    Valor
+                    <input type="number" name="value" class="input-standard input-value" placeholder="1000000000">
+                </label>
+
+                <label>
+                    De
+                    <select name="options" id="options-coins" class="input-standard">
+                        <option value="Euro">Euro</option>
+                        <option value="Real">Real</option>
+                        <option value="Dólar">Dólar</option>
+                    </select>
+                </label>
+
+                <label>
+                    Para
+                    <select name="options-conversion" id="options-coins-conversion" class="input-standard">
+                        <option value="Real">Real</option>
+                        <option value="Euro">Euro</option>
+                        <option value="Dólar">Dólar</option>
+                    </select>
+                </label>
+
+                <button class="input-standard" id="btn-calc">Calcular</button>
+            </div>
+
+            <div class="container-value-converted">
+                <h3>Conversão:</h3>
+                <h4 class="conversion-type">Real brasileiro/Dólar americano</h4>
+                <p class="value-conversion">5000</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Desenvolvido por Fabiano Cavalcante, 2022</p>
+    </footer>
+
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+</html>
