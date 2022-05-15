@@ -2,15 +2,6 @@
 
 ## Website de conversão com as principais moedas disponíveis.
 
-### Contéudo
-
-<p align="center">
- <a href="#objetivo">Objetivo</a> •
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#licenc-a">Licença</a> • 
- <a href="#autor">Autor</a>
-</p>
-
 ### Status do Projeto
 
 <h4 align="center"> 
