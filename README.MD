@@ -12,7 +12,13 @@
 
 Para a utilização é necessário somente um navegador web e conexão com a internet.
 
-### 🛠 Tecnologias
+### Como usar
+
+- Insira no campo "Valor" a quantia a ser convertida;
+- Selecione na opção "De" o tipo de moeda a ser convertida;
+- Escolha para qual moeda quer converter o valor na opção "Para".
+
+### 🛠 Tecnologias usadas
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
