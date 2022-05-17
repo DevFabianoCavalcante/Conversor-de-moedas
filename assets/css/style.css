@@ -28,7 +28,7 @@ header {
 }
 
 .container-page {
-    height: 80rem;
+    height: auto;
 }
 
 .title-container {
@@ -36,7 +36,6 @@ header {
     justify-content: center;
     align-items: center;
     height: 13rem;
-    margin: 0 0 5rem 0;
 }
 
 .title-container h2 {
@@ -73,6 +72,7 @@ header {
     background-color: var(--main-color);
     color: white;
     text-shadow: 0 0 0 #000;
+    cursor: pointer;
 }
 
 .input-standard::placeholder {
@@ -81,7 +81,7 @@ header {
 }
 
 #btn-calc {
-    margin: 6rem 0 0 0;
+    margin: 3rem 0 0 0;
     background-color: #4d94c4;
 }
 
@@ -105,7 +105,7 @@ header {
 }
 
 .container-value-converted h4 {
-    margin: 0 0 4rem 0;
+    margin: 0 0 3.5rem 0;
     font-size: 3rem;
     text-align: center;
     text-shadow: 0 0 0 #000;
@@ -120,3 +120,26 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     margin: 0;
 }
 
+footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 10.9rem;
+    width: 100%;
+}
+
+footer p {
+    font-size: 3.2rem;
+    color: white;
+    text-shadow: 0 0 0 #000;
+    margin: 0 0 0 4rem;
+
+}
+
+.logomarca {
+    height: 10.5rem;
+    width: 10.5rem;
+}

@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Fabiano Cavalcante">
+    <meta name="description" content="Conversor de moedas feito com o objetivo de exercitar habilidades em Javascript">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/25/25228.png">
+    <meta property="og:title" content="Conversor de moedas">
+    <meta property="og:description" content="Converta qualquer valor em tempo real.">
+    <title>Conversor de moedas FCSdev</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/site.webmanifest">
+    <link rel="mask-icon" href="./assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <header>
@@ -22,24 +35,36 @@
             <div class="container-options-conversion">
                 <label>
                     Valor
-                    <input type="number" name="value" class="input-standard input-value" placeholder="1000000000">
+                    <input type="number" name="value" class="input-standard" id="input-value" placeholder="1000000000">
                 </label>
 
                 <label>
                     De
-                    <select name="options" id="options-coins" class="input-standard">
-                        <option value="Euro">Euro</option>
-                        <option value="Real">Real</option>
-                        <option value="Dólar">Dólar</option>
+                    <select name="options" id="options-coins" class="input-standard"> 
+                        <option value="USD">Dólar Americano</option>
+                        <option value="AUD">Dólar Australiano</option>
+                        <option value="CAD">Dólar Canadense</option>
+                        <option value="EUR">Euro</option>
+                        <option value="GBP">Libra Esterlina</option>
+                        <option value="ARS">Peso Argentino</option>
+                        <option value="BRL" selected>Real Brasileiro</option>
+                        <option value="CNY">Remimbi</option>
+                        <option value="JPY">Yen Japonês</option>
                     </select>
                 </label>
 
                 <label>
                     Para
                     <select name="options-conversion" id="options-coins-conversion" class="input-standard">
-                        <option value="Real">Real</option>
-                        <option value="Euro">Euro</option>
-                        <option value="Dólar">Dólar</option>
+                        <option value="USD" selected>Dólar Americano</option>
+                        <option value="AUD">Dólar Australiano</option>
+                        <option value="CAD">Dólar Canadense</option>
+                        <option value="EUR">Euro</option>
+                        <option value="GBP">Libra Esterlina</option>
+                        <option value="ARS">Peso Argentino</option>
+                        <option value="BRL">Real Brasileiro</option>
+                        <option value="CNY">Remimbi</option>
+                        <option value="JPY">Yen Japonês</option>
                     </select>
                 </label>
 
@@ -47,13 +72,14 @@
             </div>
 
             <div class="container-value-converted">
-                <h3>Conversão:</h3>
-                <h4 class="conversion-type">Real brasileiro/Dólar americano</h4>
-                <p class="value-conversion">5000</p>
+                <h3>Resultado da Conversão</h3>
+                <h4 class="conversion-type"></h4>
+                <p class="value-conversion"></p>
             </div>
         </div>
     </section>
     <footer>
+        <img class="logomarca" src="./assets/img/FCS DEV B.png" alt="logomarca dev">
         <p>Desenvolvido por Fabiano Cavalcante, 2022</p>
     </footer>
 

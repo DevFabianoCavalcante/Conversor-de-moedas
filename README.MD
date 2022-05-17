@@ -2,15 +2,6 @@
 
 ## Website de conversão com as principais moedas disponíveis.
 
-### Contéudo
-
-<p align="center">
- <a href="#objetivo">Objetivo</a> •
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#licenc-a">Licença</a> • 
- <a href="#autor">Autor</a>
-</p>
-
 ### Status do Projeto
 
 <h4 align="center"> 
@@ -21,7 +12,13 @@
 
 Para a utilização é necessário somente um navegador web e conexão com a internet.
 
-### 🛠 Tecnologias
+### Como usar
+
+- Insira no campo "Valor" a quantia a ser convertida;
+- Selecione na opção "De" o tipo de moeda a ser convertida;
+- Escolha para qual moeda quer converter o valor na opção "Para".
+
+### 🛠 Tecnologias usadas
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
