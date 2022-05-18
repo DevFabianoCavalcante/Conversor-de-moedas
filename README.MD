@@ -5,7 +5,7 @@
 ### Status do Projeto
 
 <h4 align="center"> 
-	🚧 Em construção 🚧
+	:white_check_mark: Concluído :white_check_mark:
 </h4>
 
 ### Pré requisitos
