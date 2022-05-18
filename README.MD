@@ -14,6 +14,7 @@ Para a utilização é necessário somente um navegador web e conexão com a int
 
 ### Como usar
 
+- Acesse: https://fcsdevconversor.netlify.app/
 - Insira no campo "Valor" a quantia a ser convertida;
 - Selecione na opção "De" o tipo de moeda a ser convertida;
 - Escolha para qual moeda quer converter o valor na opção "Para".
