@@ -10,7 +10,7 @@ let result;
 let locale;
 
 const requisition = () => {
-    fetch(`https://api.hgbrasil.com/finance/quotations?format=json-cors&key=666d26e4`)
+    fetch('https://api.hgbrasil.com/finance/quotations?format=json-cors&key=6dd8e3ca')
     .then(response => response.json())
     .then(json => resultRequisition = json.results.currencies)
     .catch(error => {
