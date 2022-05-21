@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Fabiano Cavalcante">
     <meta name="description" content="Conversor de moedas feito com o objetivo de exercitar habilidades em Javascript">
-    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/25/25228.png">
+    <meta property="og:image" content="https://fcsdevconversor.netlify.app/">
     <meta property="og:title" content="Conversor de moedas">
     <meta property="og:description" content="Converta qualquer valor em tempo real.">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://fcsdevconversor.netlify.app/">
     <title>Conversor de moedas FCSdev</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -35,7 +37,7 @@
             <div class="container-options-conversion">
                 <label>
                     Valor
-                    <input type="number" name="value" class="input-standard" id="input-value" placeholder="1000000000">
+                    <input type="text" name="value" class="input-standard" id="input-value" placeholder="0,00" maxlength="16">
                 </label>
 
                 <label>

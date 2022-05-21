@@ -1,4 +1,14 @@
 @media (max-width: 900px) {
+
+    header {
+        height: 6rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--main-color);
+    }
+
     .title-page {
         font-size: 3rem;
         color: #FFF;
@@ -7,8 +17,8 @@
         text-align: center;
     }
 
-    .title-container h2 {
-        font-size: 2.5rem;
+    .title-container {
+        display: none;
     }
 
     .main-container {
@@ -21,7 +31,13 @@
     .container-options-conversion {
         display: flex;
         flex-flow: column;
-        margin: 0 0 5rem 0;
+        margin: 0 0 2.3rem 0;
+    }
+
+    .container-options-conversion label {
+        font-size: 2.5rem;
+        text-align: left;
+        margin: 0 0 2rem 0;
     }
 
     .container-value-converted {
@@ -30,7 +46,7 @@
         align-items: center;
         height: auto;
         width: 30rem;
-        margin: 0 0 5rem 0;
+        margin: 0 0 3rem 0;
     }
 
     .container-value-converted h3 {
@@ -39,22 +55,34 @@
     
     .container-value-converted h4 {
         font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
     
     .container-value-converted p {
-        font-size: 4rem;
-        margin: 0 0 2rem 0;
+        font-size: 3rem;
+        margin-bottom: 1rem;
     }
 
     footer {
-        position: relative;
         flex-flow: column;
         font-size: 2rem;
         text-align: center;
         height: auto;
     }
 
+    .logomarca {
+        height: 6rem;
+        width: 6rem;
+    }
+
     footer p {
-        margin: auto;
+        margin: 0;
+        font-size: 2rem;
     }
 }
+
+@media (max-height: 667px) {
+    footer {
+        position: relative;
+    }
+};
