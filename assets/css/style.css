@@ -10,7 +10,7 @@
 
 html {
     font-size: 10px;
-    font-family: 'Abhaya Libre', serif;
+    font-family: sans-serif;
 }
 
 header {
@@ -89,7 +89,7 @@ header {
     display: flex;
     flex-flow: column;
     align-items: center;
-    height: 27.5rem;
+    height: 25rem;
     width: 58.9rem;
     margin: 9rem 0 0 0rem;
     border-radius: 2rem;
@@ -98,21 +98,22 @@ header {
 }
 
 .container-value-converted h3 {
-    margin: 3rem 0 1rem 0;
+    margin: 2rem 0 1.5rem 0;
     font-size: 3.5rem;
     text-align: center;
     text-shadow: 0 0 0 #000;
 }
 
 .container-value-converted h4 {
-    margin: 0 0 3.5rem 0;
+    margin: 0 0 2rem 0;
     font-size: 3rem;
     text-align: center;
     text-shadow: 0 0 0 #000;
 }
 
 .container-value-converted p {
-    font-size: 6.4rem;
+    font-size: 3.5rem;
+    margin: 4rem 0 0 0;
 }
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
