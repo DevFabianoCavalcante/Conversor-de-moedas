@@ -18,6 +18,24 @@ const requisition = () => {
     })
 };
 
+const maskInput = () => {
+    let input = document.querySelector('#input-value');
+    let valueInput = input.value;
+
+    valueInput = valueInput.replace(/\D/g, '');
+    valueInput = valueInput.replace(/([\d]{2})$/g, ',$1');
+
+    if(valueInput.length > 6) {
+        valueInput = valueInput.replace(/(\d{3}),(\d{2}$)/g, ".$1,$2");
+    };
+
+    if(valueInput.length > 10) {
+        valueInput = valueInput.replace(/(\d{3}(?=\.))/g, ".$1");
+    };
+
+    input.value = valueInput;
+};
+
 const getTypeCoin = () => typeCoin.value;
 const getTypeConversion = () => typeConversion.value;
 
@@ -44,10 +62,11 @@ const calculateCoin = (value, coinTypeOne, coinTypeTwo) => {
             result = value * coinTypeOne;
         } else if (coinTypeOne !== 'BRL' && coinTypeTwo !== 'BRL') {
             result = (value * coinTypeOne) / coinTypeTwo;
-        }
-    } else {
-        result = 'Insira um valor';
-    }
+        };
+    } else if(value === '' || isNaN(value)) {
+        result = 'Insira um valor válido';
+    };
+
 };
 
 const setLocaleCoin = () => {
@@ -64,9 +83,8 @@ const setLocaleCoin = () => {
     (localeCoin === 'BRL')? locale = ['pt-BR', localeCoin]: 0;
 };
 
-const changeFormatCoin = (value, locale) => {
+const changeFormatCoinResult = (value, locale) => {
     const [localeCoin, currency] = locale;
-    (value.lenght >=1)? value.toFixed(2): value;
 
     const formatValue = value.toLocaleString(`${localeCoin}`, {style: 'currency', currency: `${currency}`});
     setValueDisplay(formatValue);
@@ -81,20 +99,27 @@ const setValueDisplay = (valueCoin) => {
     document.querySelector('.value-conversion').innerHTML = valueConverted;
 };
 
+const modifyTypeInputValue = (value) => {
+    value = parseFloat(value.replace(/\./g, '').replace(',', '.'));
+    value = (isNaN(value))? value = '': value;
+    return value;
+};
+
 const conversionCoin = () => {
-    const value = document.querySelector('#input-value').value;
+    const getInputAreaValue = document.querySelector('#input-value').value;
+    let value = modifyTypeInputValue(getInputAreaValue);
     const valueType = getTypeCoin();
     const ConversionType = getTypeConversion();
     getValueConversion(valueType, ConversionType);
     calculateCoin(value, coinOptionOne, coinOptionTwo);
     setLocaleCoin();
-    changeFormatCoin(result, locale);
+    changeFormatCoinResult(result, locale);
 };
 
 const btnEnterConversion = (e) => {
     if(e.keyCode === 13) {
         conversionCoin();
-    }
+    };
 };
 
 requisition();
@@ -102,4 +127,5 @@ requisition();
 document.querySelector('#btn-calc').addEventListener('click', conversionCoin);
 typeCoin.addEventListener('change', getTypeCoin);
 typeConversion.addEventListener('change', getTypeConversion);
-document.addEventListener('keypress', btnEnterConversion);
+document.addEventListener('keyup', btnEnterConversion);
+document.querySelector('#input-value').addEventListener('keyup', maskInput);
