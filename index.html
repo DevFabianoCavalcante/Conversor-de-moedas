@@ -11,9 +11,9 @@
     <meta property="og:description" content="Converta qualquer valor em tempo real.">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:url" content="https://fcsdevconversor.netlify.app/">
-    <title>Conversor de moedas FCSdev</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
@@ -21,66 +21,57 @@
     <link rel="mask-icon" href="./assets/img/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <title>Conversor de moedas FCSdev</title>
 </head>
 <body>
-    <header>
-        <h1 class="title-page">Conversor de moedas</h1>
+    <header class="container-header">
+        <h1>Conversor de Moedas</h1>
     </header>
     <section class="container-page">
-        <div class="title-container">
-            <h2>Converta as principais moedas de maneira fácil e prática.</h2>
-        </div>
         <div class="main-container">
             <div class="container-options-conversion">
                 <label>
-                    Valor
-                    <input type="text" name="value" class="input-standard" id="input-value" placeholder="0,00" maxlength="14">
+                    <input type="text" name="value" class="input-value" id="input-value" placeholder="0,00" maxlength="14">
                 </label>
 
                 <label>
-                    De
                     <select name="options" id="options-coins" class="input-standard"> 
-                        <option value="USD">Dólar Americano</option>
-                        <option value="AUD">Dólar Australiano</option>
-                        <option value="CAD">Dólar Canadense</option>
-                        <option value="EUR">Euro</option>
-                        <option value="GBP">Libra Esterlina</option>
-                        <option value="ARS">Peso Argentino</option>
-                        <option value="BRL" selected>Real Brasileiro</option>
-                        <option value="CNY">Remimbi</option>
-                        <option value="JPY">Yen Japonês</option>
+                        <option value="USD">Dólar Americano (USD)</option>
+                        <option value="AUD">Dólar Australiano (AUD)</option>
+                        <option value="CAD">Dólar Canadense (CAD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="ARS">Peso Argentino (ARS)</option>
+                        <option value="BRL" selected>Real Brasileiro (BRL)</option>
+                        <option value="CNY">Remimbi (CNY)</option>
+                        <option value="JPY">Yen Japonês (JPY)</option>
                     </select>
                 </label>
 
                 <label>
-                    Para
                     <select name="options-conversion" id="options-coins-conversion" class="input-standard">
-                        <option value="USD" selected>Dólar Americano</option>
-                        <option value="AUD">Dólar Australiano</option>
-                        <option value="CAD">Dólar Canadense</option>
-                        <option value="EUR">Euro</option>
-                        <option value="GBP">Libra Esterlina</option>
-                        <option value="ARS">Peso Argentino</option>
-                        <option value="BRL">Real Brasileiro</option>
-                        <option value="CNY">Remimbi</option>
-                        <option value="JPY">Yen Japonês</option>
+                        <option value="USD" selected>Dólar Americano (USD)</option>
+                        <option value="AUD">Dólar Australiano (AUD)</option>
+                        <option value="CAD">Dólar Canadense (CAD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="ARS">Peso Argentino (ARS)</option>
+                        <option value="BRL">Real Brasileiro (BRL)</option>
+                        <option value="CNY">Remimbi (CNY)</option>
+                        <option value="JPY">Yen Japonês (JPY)</option>
                     </select>
                 </label>
-
-                <button class="input-standard" id="btn-calc">Calcular</button>
             </div>
-
-            <div class="container-value-converted">
-                <h3>Resultado da Conversão</h3>
-                <h4 class="conversion-type"></h4>
-                <p class="value-conversion"></p>
+            <div class="container-btn">
+                <button class="btn-calculator" id="btn-calc">Converter</button>
             </div>
         </div>
+        <div class="container-value-converted">
+            <p class="value-conversion"></p>
+        </div>
     </section>
-    <footer>
-        <img class="logomarca" src="./assets/img/FCS DEV B.png" alt="logomarca dev">
-        <p>Desenvolvido por Fabiano Cavalcante, 2022</p>
-    </footer>
 
     <script type="text/javascript" src="./assets/js/main.js"></script>
 </body>

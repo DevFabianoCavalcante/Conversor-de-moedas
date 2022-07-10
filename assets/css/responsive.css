@@ -1,92 +1,70 @@
-@media (max-width: 900px) {
-
-    header {
-        height: 6rem;
-        width: 100%;
-        display: flex;
+@media (max-width: 1000px) {
+    .container-header {
+        height: 10rem;
         justify-content: center;
-        align-items: center;
-        background-color: var(--main-color);
+        margin: 4rem 0 3rem 0;
     }
 
-    .title-page {
-        font-size: 3rem;
-        font-family: sans-serif;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .title-container {
-        display: none;
-    }
-
-    .main-container {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        margin: 1.5rem 0 0 0;
+    .container-header h1 {
+        font-size: 4rem;
+        margin: 0 auto;
     }
 
     .container-options-conversion {
-        display: flex;
-        flex-flow: column;
-        margin: 0 0 2.3rem 0;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
     }
 
-    .container-options-conversion label {
-        font-size: 2.5rem;
-        text-align: left;
-        margin: 0 0 2rem 0;
+    .input-value, .input-standard {
+        font-size: 2.2rem;
+        margin: 0 0 4rem 0;
+    }
+
+    .input-value {
+        width: 34rem;
+    }
+    
+    .input-standard{
+        width: 34rem;
     }
 
     .container-value-converted {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        height: auto;
-        width: 30rem;
-        margin: 0 0 3rem 0;
-    }
-
-    .container-value-converted h3 {
-        font-size: 2.5rem;
-        margin: 1.5rem 0 1.5rem 0;
-    }
-    
-    .container-value-converted h4 {
-        font-size: 2rem;
-        margin: 0 0 1rem 0;
+        margin: 5rem auto 0 auto;
     }
     
     .container-value-converted p {
-        font-size: 3rem;
-        margin: 0 0 1rem 0;
-    }
-
-    footer {
-        position: static;
-        flex-flow: column;
-        font-size: 2rem;
-        text-align: center;
-        height: auto;
-    }
-
-    .logomarca {
-        height: 6rem;
-        width: 6rem;
-    }
-
-    footer p {
-        margin: auto;
-        font-size: 2rem;
-        padding-bottom: 2rem;
+        font-size: 3.2rem;
     }
 }
 
-@media (min-height: 820px) {
-    footer {
-        position: absolute;
-        bottom: 0;
+@media (max-width: 470px) {
+    .container-header {
+        height: 8rem;
+        justify-content: center;
+        margin: 3rem 0 2rem 0;
     }
-};
+
+    .container-header h1 {
+        font-size: 2.5rem;
+        margin: 0 auto;
+    }
+
+    .input-value, .input-standard {
+        font-size: 1.8rem;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .input-value {
+        width: 25rem;
+    }
+    
+    .input-standard{
+        width: 25rem;
+    }
+
+    .container-value-converted {
+        width: 30rem;
+    }
+}

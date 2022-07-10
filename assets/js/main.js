@@ -42,14 +42,24 @@ const getTypeConversion = () => typeConversion.value;
 const getValueConversion = (typeValue, typeConversion) => {
 
     (typeValue == 'ARS')? coinOptionOne = resultRequisition.ARS.buy:
-    (typeValue == 'AUD')? coinOptionOne = resultRequisition.AUD.buy:(typeValue == 'CAD')? coinOptionOne = resultRequisition.CAD.buy:(typeValue == 'CNY')? coinOptionOne = resultRequisition.CNY.buy:(typeValue == 'EUR')? coinOptionOne = resultRequisition.EUR.buy:
+    (typeValue == 'AUD')? coinOptionOne = resultRequisition.AUD.buy:
+    (typeValue == 'CAD')? coinOptionOne = resultRequisition.CAD.buy:
+    (typeValue == 'CNY')? coinOptionOne = resultRequisition.CNY.buy:
+    (typeValue == 'EUR')? coinOptionOne = resultRequisition.EUR.buy:
     (typeValue == 'GBP')? coinOptionOne = resultRequisition.GBP.buy:
-    (typeValue == 'JPY')? coinOptionOne = resultRequisition.JPY.buy:(typeValue == 'USD')? coinOptionOne = resultRequisition.USD.buy:(typeValue == 'BRL')? coinOptionOne = 'BRL' : 'BRL';
+    (typeValue == 'JPY')? coinOptionOne = resultRequisition.JPY.buy:
+    (typeValue == 'USD')? coinOptionOne = resultRequisition.USD.buy:
+    (typeValue == 'BRL')? coinOptionOne = 'BRL' : 'BRL';
 
     (typeConversion == 'ARS')? coinOptionTwo = resultRequisition.ARS.buy:
-    (typeConversion == 'AUD')? coinOptionTwo = resultRequisition.AUD.buy:(typeConversion == 'CAD')? coinOptionTwo = resultRequisition.CAD.buy:(typeConversion == 'CNY')? coinOptionTwo = resultRequisition.CNY.buy:(typeConversion == 'EUR')? coinOptionTwo = resultRequisition.EUR.buy:
+    (typeConversion == 'AUD')? coinOptionTwo = resultRequisition.AUD.buy:
+    (typeConversion == 'CAD')? coinOptionTwo = resultRequisition.CAD.buy:
+    (typeConversion == 'CNY')? coinOptionTwo = resultRequisition.CNY.buy:
+    (typeConversion == 'EUR')? coinOptionTwo = resultRequisition.EUR.buy:
     (typeConversion == 'GBP')? coinOptionTwo = resultRequisition.GBP.buy:
-    (typeConversion == 'JPY')? coinOptionTwo = resultRequisition.JPY.buy:(typeConversion == 'USD')? coinOptionTwo = resultRequisition.USD.buy:(typeConversion == 'BRL')? coinOptionTwo = 'BRL' : 'BRL';
+    (typeConversion == 'JPY')? coinOptionTwo = resultRequisition.JPY.buy:
+    (typeConversion == 'USD')? coinOptionTwo = resultRequisition.USD.buy:
+    (typeConversion == 'BRL')? coinOptionTwo = 'BRL' : 'BRL';
 };
 
 const calculateCoin = (value, coinTypeOne, coinTypeTwo) => {
@@ -91,11 +101,7 @@ const changeFormatCoinResult = (value, locale) => {
 };
 
 const setValueDisplay = (valueCoin) => {
-    const currencyOne = getTypeCoin();
-    const currencyTwo = getTypeConversion();
     const valueConverted = valueCoin;
-    const cambio = `${currencyOne} - ${currencyTwo}`;
-    document.querySelector('.conversion-type').innerHTML = cambio;
     document.querySelector('.value-conversion').innerHTML = valueConverted;
 };
 

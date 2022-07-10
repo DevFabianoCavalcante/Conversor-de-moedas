@@ -5,74 +5,71 @@
 }
 
 :root{
-    --main-color: #205375;
+    --primary-color: #09150D;
+    --second-color: #C0E729;
+    --third-color: #7C9B03;
+    --fourth-color: #DFFAE8;
+    --fifth-color: #0F2115;
+    --gradient-1: #FFFFFF, #C0E729;
+    --openSans:'Open Sans', sans-serif;
+    --arimaMadurai: 'Arima Madurai', cursive;
 }
 
 html {
     font-size: 10px;
     font-family: sans-serif;
+    background-color: var(--primary-color);
 }
 
-header {
-    height: 12.4rem;
+.container-header {
+    height: 15rem;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    background-color: var(--main-color);
+    background-color: var(--primary-color);
+    margin: 6rem 0 4rem 0;
 }
 
-.title-page {
-    font-size: 4rem;
-    color: #FFF;
+.container-header h1 {
+    font-size: 5rem;
+    font-family: var(--arimaMadurai);
+    font-weight: bold;
+    color: var(--fourth-color);
+    margin: 0 23rem;
 }
 
 .container-page {
     height: auto;
 }
 
-.title-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 13rem;
-}
-
-.title-container h2 {
-    font-size: 5rem;
-    color: var(--main-color);
-    text-shadow: 0 0 0 white;
-    text-align: center;
-}
-
-.main-container {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .container-options-conversion {
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0 0 8rem 0;
 }
 
-.container-options-conversion label {
-    display: flex;
-    flex-flow: column;
+.input-value, .input-standard {
+    height: 6.1rem;
     font-size: 3rem;
-    text-align: left;
-    margin: 0 0 3rem 0;
+    font-family: var(--openSans);
+    font-weight: 400;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--second-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    outline: none;
+}
+
+.input-value {
+    width: 20rem;
 }
 
 .input-standard{
-    height: 5.6rem;
-    width: 26.6rem;
-    font-size: 3rem;
-    text-align: center;
-    border-radius: 2rem;
-    background-color: var(--main-color);
-    color: white;
-    text-shadow: 0 0 0 #000;
-    cursor: pointer;
+    width: 38.8rem;
 }
 
 .input-standard::placeholder {
@@ -80,67 +77,54 @@ header {
     color: white;
 }
 
-#btn-calc {
-    margin: 3rem 0 0 0;
-    background-color: #4d94c4;
+.container-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-calculator {
+    height: 6.1rem;
+    min-width: 19.6rem;
+    border-radius: 5px;
+    background: linear-gradient(var(--gradient-1));
+    font-size: 3rem;
+    font-family: var(--openSans);
+    font-weight: 400;
+    color: var(--third-color);
+    transition: ease-in-out .5s;
+}
+
+.btn-calculator:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+    cursor: pointer;
 }
 
 .container-value-converted {
     display: flex;
     flex-flow: column;
+    justify-content: center;
     align-items: center;
-    height: 25rem;
-    width: 58.9rem;
-    margin: 9rem 0 0 0rem;
-    border-radius: 2rem;
-    background-color: var(--main-color);
-    color: white;    
-}
-
-.container-value-converted h3 {
-    margin: 2rem 0 1.5rem 0;
-    font-size: 3.5rem;
-    text-align: center;
-    text-shadow: 0 0 0 #000;
-}
-
-.container-value-converted h4 {
-    margin: 0 0 2rem 0;
-    font-size: 3rem;
-    text-align: center;
-    text-shadow: 0 0 0 #000;
+    align-self: center;
+    height: 10rem;
+    width: 40rem;
+    border-radius: 5px;
+    margin: 10rem auto 0 auto;
+    background-color: var(--fifth-color);
 }
 
 .container-value-converted p {
-    font-size: 3.5rem;
-    margin: 4rem 0 0 0;
+    font-size: 6.4rem;
+    font-family: var(--openSans);
+    font-weight: 400;
+    background-image: linear-gradient(var(--gradient-1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-footer{
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-color);
-    height: 10.9rem;
-    width: 100%;
-}
-
-footer p {
-    font-size: 3.2rem;
-    color: white;
-    text-shadow: 0 0 0 #000;
-    margin: 0 0 0 4rem;
-
-}
-
-.logomarca {
-    height: 10.5rem;
-    width: 10.5rem;
 }
